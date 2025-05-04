@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M09T2-Process", "M09T2-Proc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadPool_Exemple", "ThreadPool_Exemple\ThreadPool_Exemple.csproj", "{1E8452BB-4F98-49B4-A5CF-63E6E9BDC6FC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParalelTasks", "TasksExemples\ParalelTasks.csproj", "{719E3D09-4856-4FD2-AEB9-D5AB0BC95A36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTasks", "AsyncTasks\AsyncTasks.csproj", "{478C6127-9328-44F4-905D-3D8A67688F97}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{1E8452BB-4F98-49B4-A5CF-63E6E9BDC6FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E8452BB-4F98-49B4-A5CF-63E6E9BDC6FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E8452BB-4F98-49B4-A5CF-63E6E9BDC6FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{719E3D09-4856-4FD2-AEB9-D5AB0BC95A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{719E3D09-4856-4FD2-AEB9-D5AB0BC95A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{719E3D09-4856-4FD2-AEB9-D5AB0BC95A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{719E3D09-4856-4FD2-AEB9-D5AB0BC95A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{478C6127-9328-44F4-905D-3D8A67688F97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{478C6127-9328-44F4-905D-3D8A67688F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{478C6127-9328-44F4-905D-3D8A67688F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{478C6127-9328-44F4-905D-3D8A67688F97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
