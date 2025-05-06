@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParalelTasks", "TasksExempl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncTasks", "AsyncTasks\AsyncTasks.csproj", "{478C6127-9328-44F4-905D-3D8A67688F97}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M09T2.Activities", "M09T2.Activities\M09T2.Activities.csproj", "{D8B14640-B95A-4787-B529-8D4EEEC8422D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{478C6127-9328-44F4-905D-3D8A67688F97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{478C6127-9328-44F4-905D-3D8A67688F97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{478C6127-9328-44F4-905D-3D8A67688F97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8B14640-B95A-4787-B529-8D4EEEC8422D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8B14640-B95A-4787-B529-8D4EEEC8422D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8B14640-B95A-4787-B529-8D4EEEC8422D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8B14640-B95A-4787-B529-8D4EEEC8422D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
