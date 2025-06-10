@@ -1,5 +1,7 @@
 ﻿using M09T2.Act6;
 using System;
+using System.Diagnostics;
+using System.Xml.Serialization;
 
 namespace M09T2.Activities
 {
@@ -24,10 +26,73 @@ namespace M09T2.Activities
             //Act7BankAccount();
 
             /*** Act 9 ***/
-            await Act9BankAccount();
+            MakeBreakfast();
+            await MakeBreakfastAsync();
+
+            /*** Act 9 ***/
+            //await Act9BankAccount();
 
             /*** Act 10 ***/
-            //await Ex10();
+            //await Act10();
+        }
+
+        static async Task MakeBreakfastAsync()
+        {
+
+            Console.WriteLine("\n== Esmorzar PARAL·LEL ==");
+            var sw = Stopwatch.StartNew();
+           
+            var cafe = Tasca("Cafè", 5, ConsoleColor.DarkYellow);
+            var ous = Tasca("Ous ferrats", 10, ConsoleColor.Yellow);
+            var torrat = Tasca("Pa torrat", 7, ConsoleColor.DarkMagenta)
+                         .ContinueWith(_ => Tasca("Melmelada", 2, ConsoleColor.Magenta));  // la melmelada espera el pa
+            
+            var poma = Tasca("Poma", 3, ConsoleColor.Green);
+
+            // Esperem que tot acabi (melmelada està “enganxada” al pa)
+            //await Task.WhenAll(cafe, ous, torrat, poma);
+
+            var a = new Task(() => { Task.WhenAll(cafe, ous); torrat.Start(); });
+
+            Console.ResetColor();
+            Console.WriteLine($"Tot emplatat! Temps total: {sw.Elapsed:mm\\:ss\\.fff}");
+        }
+
+        static async Task Tasca(string nom, int segons, ConsoleColor color)
+        {
+            lock (Console.Out) { Console.ForegroundColor = color; Console.WriteLine($"-> Inici {nom} \t Fil:{Thread.CurrentThread.ManagedThreadId}"); }
+            await Task.Delay(segons * 1000);
+            lock (Console.Out) { Console.ForegroundColor = color; Console.WriteLine($"-> Fi    {nom} \t Fil:{Thread.CurrentThread.ManagedThreadId}"); }
+        }
+
+        static void MakeBreakfast()
+        {
+            Console.WriteLine("== Esmorzar SEQÜENCIAL ==");
+            var sw = Stopwatch.StartNew();
+
+            FerCafe();
+            FerOus();
+            FerPaTorrat();
+            UntarMelmelada();
+            PelarPoma();
+
+            Console.ResetColor();
+            Console.WriteLine($"Tot emplatat! Temps total: {sw.Elapsed:mm\\:ss\\.fff}");
+        }
+
+        // -------- “Tasques” (simulació) --------
+        static void FerCafe() => Simula("Cafè", 5, ConsoleColor.DarkYellow);
+        static void FerOus() => Simula("Ous ferrats", 10, ConsoleColor.Yellow);
+        static void FerPaTorrat() => Simula("Pa torrat", 7, ConsoleColor.DarkMagenta);
+        static void UntarMelmelada() => Simula("Melmelada", 2, ConsoleColor.Magenta);
+        static void PelarPoma() => Simula("Poma", 3, ConsoleColor.Green);
+
+        static void Simula(string nom, int segons, ConsoleColor color)
+        {
+            Console.ForegroundColor = color;
+            Console.WriteLine($"-> Inici {nom}");
+            Thread.Sleep(segons * 1000);
+            Console.WriteLine($"-> Fi    {nom}");
         }
 
         /// <summary>

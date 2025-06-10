@@ -15,7 +15,7 @@ namespace AsyncTasks
 
 
             /*** Exemples de tasques asincronesfjoc sequencia i paral·lel***/
-            Console.BackgroundColor = ConsoleColor.DarkBlue;
+           /* Console.BackgroundColor = ConsoleColor.DarkBlue;
             stopWatch.Start();
 
             int i1 = await LongWork("Task 1", 500000);          //Crida directa a la tasca, s'executa inmediatament.
@@ -69,7 +69,7 @@ namespace AsyncTasks
             Console.WriteLine($"Resultat t1: {iArr[0]} \t Resultat t2: {iArr[1]}");
             Console.WriteLine($"Les dos tasques en paral·lel han finalitzat en: {stopWatch.Elapsed}");
             Console.ResetColor();
-
+            */
             /*******/
 
             //Exemple 2:
@@ -80,7 +80,7 @@ namespace AsyncTasks
             //await SleepVsDelay();
 
             /**** Cancel·lacio de tasques **/
-            // await CancelTaskExemple();
+            await CancelTaskExemple();
 
 
 

@@ -7,7 +7,7 @@
         {
             /*** Formes de crear tasques ***/
             //Crear una tasca que crida un metode
-            /*Task tK = new Task(Counting);
+            Task tK = new Task(Counting);
 
             //Crear una tasca amb Lambda
             Task tK2 = new Task(() =>
@@ -29,7 +29,7 @@
             tk2.wait();
             tk3.wait();
 
-            Console.WriteLine("Finalitzacio del bloc");*/
+            Console.WriteLine("Finalitzacio del bloc");
 
             /*** Retorn d'informacio per part d'una tasca ***/
             /* Task<int> calcul = Task.Run(() =>
